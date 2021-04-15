@@ -24,7 +24,7 @@ for i in range(50):
       Z[i][j]=0
 
 
-ax1.set_title('P(X+Y)<1/2')
+ax1.set_title('P(X+Y<1/2)')
 ax1.plot_surface(X,Y,Z)
 #,cmap='viridis',edgecolor='none'
 
