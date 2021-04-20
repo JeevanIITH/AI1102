@@ -169,44 +169,32 @@ Two independent random variables $X$ and $Y$ are uniformly distributed in the in
 Now
  \begin{align}
  max[X,Y] < \dfrac{1}{2} \Rightarrow  \left(X<\dfrac{1}{2}\right) . \left(Y<\dfrac{1}{2}\right)\\
- \intertext{So} P\left(max[X,Y] < \dfrac{1}{2}\right)= P\left(\left(X<\dfrac{1}{2}\right) . \left(Y<\dfrac{1}{2}\right)  \right)
+ \intertext{So} \pr{max[X,Y] < \dfrac{1}{2}}= \pr{\left(X<\dfrac{1}{2}\right) . \left(Y<\dfrac{1}{2}\right)  }
  \end{align}
  Since $X$ and $Y$ are independent 
  \begin{align}
- P\left(\left(X<\dfrac{1}{2}\right) . \left(Y<\dfrac{1}{2}\right)  \right) = P \left(X<\dfrac{1}{2} \right).  P \left(Y<\dfrac{1}{2} \right)
+ \pr{\left(X<\dfrac{1}{2}\right) . \left(Y<\dfrac{1}{2}\right)  } = \pr{ X<\dfrac{1}{2} }.  \pr{Y<\dfrac{1}{2} }
  \end{align}
- Now 
+ Now using CDF
  \begin{align}
- P\left( X<\dfrac{1}{2} \right)= \int _{-1}^{\frac{1}{2}} f_{X}(x) dx\\
- = \int _{-1}^{\frac{1}{2}} \dfrac{1}{2} dx= \dfrac{1}{2} \left( \dfrac{1}{2}-(-1) \right) =\dfrac{3}{4}
- \intertext{similarly}  P\left( Y<\dfrac{1}{2} \right) =\dfrac{3}{4}
+ F_{X}(x)=\pr{ X<x }= \int _{-1}^{x} f_{X}(x) dx\\
+ = \int _{-1}^{x} \dfrac{1}{2} dx= \dfrac{1}{2} \left( x-(-1) \right) = \dfrac{1}{2}( x+1) 
+ \intertext{similarly} F_{Y}(y)= \pr{Y<y } = \dfrac{1}{2}(y+1)
  \end{align}
 Using (1.0.10) and (1.0.9) in (1.0.7), we get
 \begin{align}
-P\left(max[X,Y] < \dfrac{1}{2}\right)= \dfrac{3}{4} . \dfrac{3}{4}= \dfrac{9}{16}
+\pr{max[X,Y] < \dfrac{1}{2}}= \dfrac{3}{4} . \dfrac{3}{4}= \dfrac{9}{16}
 \end{align} 
 So option 2 is correct answer 
-\section*{Alternative solution}
-\begin{align}
-P\left(max[X,Y] < \dfrac{1}{2}\right)=P \left(X>Y, X<\dfrac{1}{2} \right)+ P\left( Y>X, Y<\dfrac{1}{2}\right)
-\end{align}
-Now
-\begin{align}
-P \left(X>Y, X<\dfrac{1}{2} \right) = \sum_{x=-1}^{1/2} P\left(Y<x\right). P(X=x)\\
-\intertext{using eq (0.0.8)}
-\sum_{x=-1}^{1/2} P\left(Y<x\right). P(X=x)=\int_{-1}^{\frac{1}{2}} \left( \int_{-1}^{x} \dfrac{1}{2} dy \right). \dfrac{1}{2} dx\\
-= \int_{-1}^{\frac{1}{2}} \left( \dfrac{1}{2}(x+1) \right). \dfrac{1}{2} dx\\
-=\dfrac{1}{4}  \left( \dfrac{x^2}{2} + x \right) \big|_{-1}^{1/2}= \dfrac{9}{32}
-\end{align}
-So 
-\begin{align}
-P \left(X>Y, X<\dfrac{1}{2} \right)= \dfrac{9}{32}\\
-\intertext{similarly} P\left( Y>X, Y<\dfrac{1}{2}\right)=\dfrac{9}{32}
-\end{align}
-Putting (0.0.17) ,(0.0.18) in (0.0.13) we get
-\begin{align}
-P\left(max[X,Y] < \dfrac{1}{2}\right)= \dfrac{9}{32} + \dfrac{9}{32}=\dfrac{9}{16}
-\end{align}
+
+\begin{figure}[h]
+    \centering
+    %\columnwidth
+    \includegraphics[width=\columnwidth]{cdf.png}
+    \caption{$F_{X}(x)$}
+    \label{fig:$F_{X}(x)$}
+\end{figure}
+
 
 
 
