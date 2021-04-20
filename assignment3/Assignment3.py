@@ -15,7 +15,7 @@ sample=10000
 count=0
 
 #performing the event for 10000 times
-for i in range(10000):
+for i in range(sample):
     #choosing a random point from x points
     random_num_x=random.choice(x)
     
@@ -29,7 +29,7 @@ for i in range(10000):
       
 
 #probability = (no of favourable outcomes)/(total no of outcomes)
-probability_sim= (count)/10000    
+probability_sim= (count)/sample    
 #print(probability)
 
 print("Theoritical probability is ",(9/16))
