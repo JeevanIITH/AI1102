@@ -9,7 +9,7 @@ x=np.linspace(-1,1,10000)
 y=np.linspace(-1,1,10000)
 
 #sample space
-sample=1000
+sample=10000
 
 #intialization of count for number of favorable outcomes
 count=0
