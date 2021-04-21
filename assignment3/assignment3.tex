@@ -148,7 +148,7 @@ https://github.com/JeevanIITH/AI1102/blob/main/
 assignment3/assignment3.tex
 \end{lstlisting}
 \section*{GATE EC 2012 Q.1}
-Two independent random variables $X$ and $Y$ are uniformly distributed in the interval [-1,1]. The probability that max $[X,Y]$ is less than $\dfrac{1}{2}$ is 
+Two independent random variables $X$ and $Y$ are uniformly distributed in the interval [-1,1]. The probability that $\max[X,Y]$ is less than $\dfrac{1}{2}$ is 
 \begin{multicols}{4}
 \begin{enumerate}
 \item $\dfrac{3}{4}$
@@ -168,8 +168,8 @@ Two independent random variables $X$ and $Y$ are uniformly distributed in the in
  \end{align}
 Now
  \begin{align}
- max[X,Y] < \dfrac{1}{2} \Rightarrow  \left(X<\dfrac{1}{2}\right) . \left(Y<\dfrac{1}{2}\right)\\
- \intertext{So} \pr{max[X,Y] < \dfrac{1}{2}}= \pr{\left(X<\dfrac{1}{2}\right) . \left(Y<\dfrac{1}{2}\right)  }
+ \max[X,Y] < \dfrac{1}{2} \Rightarrow  \left(X<\dfrac{1}{2}\right) . \left(Y<\dfrac{1}{2}\right)\\
+ \intertext{So} \pr{\max[X,Y] < \dfrac{1}{2}}= \pr{\left(X<\dfrac{1}{2}\right) . \left(Y<\dfrac{1}{2}\right)  }
  \end{align}
  Since $X$ and $Y$ are independent 
  \begin{align}
@@ -179,11 +179,12 @@ Now
  \begin{align}
  F_{X}(x)=\pr{ X<x }= \int _{-1}^{x} f_{X}(x) dx\\
  = \int _{-1}^{x} \dfrac{1}{2} dx= \dfrac{1}{2} \left( x-(-1) \right) = \dfrac{1}{2}( x+1) 
- \intertext{similarly} F_{Y}(y)= \pr{Y<y } = \dfrac{1}{2}(y+1)
+ \intertext{similarly} F_{Y}(y)= \pr{Y<y } = \int _{-1}^{y} f_{Y}(y) dy\\
+ = \int _{-1}^{y} \dfrac{1}{2} dy= \dfrac{1}{2} \left( y-(-1) \right) =\dfrac{1}{2}(y+1)
  \end{align}
-Using (1.0.10) and (1.0.9) in (1.0.7), we get
+Using (0.0.11) and (0.0.9) in (0.0.7), we get
 \begin{align}
-\pr{max[X,Y] < \dfrac{1}{2}}= \dfrac{3}{4} . \dfrac{3}{4}= \dfrac{9}{16}
+\pr{\max[X,Y] < \dfrac{1}{2}}= \dfrac{3}{4} . \dfrac{3}{4}= \dfrac{9}{16}
 \end{align} 
 So option 2 is correct answer 
 
